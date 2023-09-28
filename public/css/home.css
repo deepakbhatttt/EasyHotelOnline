@@ -1,0 +1,275 @@
+* {
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+
+    overflow-x: hidden;
+    /* background-color: #121212; */
+    /* color: white; */
+    position: relative;
+}
+
+.carousel-text {
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.carousel-sub-text {
+    font-size: 1rem;
+    text-align: left;
+}
+
+@media (min-width: 576px) {
+    .carousel-text {
+        font-size: 2rem;
+    }
+
+    .carousel-sub-text {
+        font-size: 1rem;
+    }
+}
+
+@media (min-width: 768px) {
+    .carousel-caption h3 {
+        font-size: 2.5rem;
+    }
+
+    .carousel-sub-text {
+        font-size: 1.5rem;
+    }
+}
+
+@media (min-width: 992px) {
+    .carousel-text {
+        font-size: 3rem;
+    }
+
+    .carousel-sub-text {
+        font-size: 2rem;
+    }
+}
+
+@media (min-width: 1200px) {
+    .carousel-text {
+        font-size: 4rem;
+    }
+
+    .carousel-sub-text {
+        font-size: 3rem;
+    }
+}
+
+/****************Navbar************/
+
+.navbar {
+    font-weight: 600;
+}
+
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 215, 0, 1%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+
+}
+
+.navbar-toggler:hover {
+    color: goldenrod;
+}
+
+.white {
+    color: rgb(255, 255, 255);
+}
+
+.white:hover {
+    color: goldenrod;
+}
+
+.white:active {
+    color: gold;
+}
+
+.custom-btn {
+    color: gold;
+    border-color: gold;
+    border-radius: 5px;
+}
+
+.custom-btn:hover {
+    border-color: gold;
+    background-color: goldenrod;
+}
+
+.book-button {
+    background-color: gold;
+    border: goldenrod 1px;
+}
+
+.book-button:hover {
+    background-color: goldenrod;
+}
+
+/* Hiding the Arrows in the Number Input field */
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+    -moz-appearance: textfield;
+}
+
+/* **********Carousel************/
+.carousel-img {
+    height: 85vh;
+    object-fit: cover;
+    /* overflow: hidden; */
+    /* width: 100%; */
+}
+
+.carousel-item {
+    position: relative;
+    text-align: center;
+    color: white;
+}
+
+.carousel-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: 'Playfair Display', serif;
+    /* font-size: 4rem; */
+}
+
+.carousel-sub-text {
+    position: absolute;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 600;
+    /* font-size: 3rem; */
+}
+
+/* ******************Avability Section****************** */
+.avability-section {
+    margin-top: -50px;
+    z-index: 1;
+    position: relative;
+}
+
+/*******************ROOM SECTION************************/
+.room-section {
+    padding: 90px;
+}
+
+.headings {
+    font-size: 40px;
+    font-family: 'Playfair Display', serif;
+    color: goldenrod;
+}
+
+hr {
+    width: 10%;
+    margin: auto;
+    color: gold;
+}
+
+.room-row {
+    padding-top: 50px;
+}
+
+.rooms {
+    padding: 3% 2%;
+}
+
+.room-cards {
+    width: 15rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.16), 0 4px 10px rgba(0, 0, 0, 0.23);
+}
+
+.room-cards:hover {
+    transform: scale(1.1);
+    box-shadow: 0 4px 10px rgba(240, 154, 33, 0.495), 0 4px 10px rgba(211, 138, 12, 0.632);
+}
+
+
+/* SERVICES */
+.services-box {
+    padding: 5%;
+}
+
+.service-cards {
+    position: relative;
+    margin: 1.5%;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.16), 0 4px 10px rgba(0, 0, 0, 0.23);
+    height: 150px;
+}
+
+.service-cards:hover {
+    transform: scale(1.1);
+}
+
+.s-icon {
+    transform: scale(1.5);
+    position: absolute;
+    top: 40px;
+    left: 42%;
+}
+
+.service-text {
+    text-align: center;
+    position: absolute;
+    bottom: 20px;
+    left: 10%;
+    right: 10%;
+}
+
+/* ***********Gallery Section********** */
+.gallery-section {
+    padding: 4% 5%;
+}
+
+.gallery {
+    padding-top: 8%;
+}
+
+.gallery-img {
+    overflow: hidden;
+    object-fit: contain;
+}
+
+.fa {
+    color: gold;
+}
+
+.fa:hover {
+    color: black;
+}
+
+/* Address Section */
+.find-section {
+    padding: 8% 5%;
+}
+
+.Address {
+    margin: 5% 2%;
+}
+
+.adds {
+    padding-left: 4%;
+}
+
+.map {
+    overflow-x: scroll;
+}
+
+/* Footer */
+.copywrite-content {
+    color: white;
+    background-color: black;
+}
+
+.footer-text {
+    text-decoration: none;
+    color: rgb(34, 33, 33);
+}

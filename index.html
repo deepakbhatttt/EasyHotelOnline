@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>EasyHotelOnline</title>
+
+    <!-- Font -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Edu+NSW+ACT+Foundation&family=Playfair+Display&family=Roboto:wght@100&display=swap"
+        rel="stylesheet">
+
+    <!-- Bootstrap CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
+
+    <!-- SwiperJS CDN -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+
+    <!-- CSS Stylesheet -->
+    <link rel="stylesheet" href="public/css/home.css">
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
+    <script src="https://kit.fontawesome.com/8c7b3ab337.js" crossorigin="anonymous"></script>
+</head>
+
+<body class="bg-light">
+    <!-- Navbar Section -->
+    <header>
+        <nav class="navbar navbar-expand-lg fixed-top px-lg-3 py-lg-2 shadow-sm"
+            style="background-color: rgba(0, 0, 0, 0.614)">
+            <div class="container-fluid ">
+                <a class="navbar-brand me-5 fw-bold fs-3 white" href="index.html">Arahnyam
+                    <!-- <img src="./public/img/logo.png" alt="Arahnyam" width="65" height="45"> -->
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse " id="navbarSupportedContent">
+                    <ul class="navbar-nav mx-auto">
+                        <li class="nav-item">
+                            <a class="nav-link px-4 white" aria-current="page" href="#">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link px-4 white" href="#Rooms">Rooms</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link px-4 white" href="#Gallery">Gallery</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link px-4 white" href="#Abut">About Us</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link px-4 white" href="#FindUsHere">Contact Us</a>
+                        </li>
+                    </ul>
+                    <div class="d-flex">
+                        <button type="button" class="btn btn-outline-dark custom-btn me-lg-3 me-2 fw-bold"
+                            data-bs-toggle="modal" data-bs-target="#loginModal">Login</button>
+                        <button type="button" class="btn btn-outline-dark custom-btn fw-bold" data-bs-toggle="modal"
+                            data-bs-target="#registerModal">Register</button>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <!--Login Modal -->
+        <div class="modal fade" id="loginModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+            aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <form action="">
+                        <div class="modal-header">
+                            <h5 class="modal-title"><i class="bi bi-person"></i>User Login</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <form>
+                                <div class="mb-3">
+                                    <label class="form-label">Email address</label>
+                                    <input type="email" class="form-control shadow-none">
+                                </div>
+                                <div class="mb-4">
+                                    <label class="form-label">Password</label>
+                                    <input type="password" class="form-control shadow-none">
+                                </div>
+                                <div class="d-flex align-items-center justify-content-between">
+                                    <button type="submit"
+                                        class="btn btn-outline-dark book-button fw-bold mb-2">LOGIN</button>
+                                    <a href="javascript: void(0)" class="text-secondary text-decoration-none">Forgot
+                                        Password</a>
+                                </div>
+                            </form>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <!-- Registration Modal -->
+        <div class="modal fade" id="registerModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+            aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <form action="">
+                        <div class="modal-header">
+                            <h5 class="modal-title"><i class="bi bi-person-fill-add"></i> User Registration</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <span class="badge rounded-pill bg-light text-dark mb-3 text-wrap lh-base">
+                                Note: Your details must match with your ID (Aadhar Card, Passport, Driving Liscence,
+                                etc.) that will be required during Check-In.
+                            </span>
+                            <div class="container-fluid">
+                                <div class="row">
+                                    <div class="col-md-6 ps-0 mb-3">
+                                        <label class="form-label">Name</label>
+                                        <input type="text" class="form-control shadow-none">
+                                    </div>
+                                    <div class="col-md-6 p-0">
+                                        <label class="form-label">Email</label>
+                                        <input type="email" class="form-control shadow-none">
+                                    </div>
+                                    <div class="col-md-6 ps-0 mb-3">
+                                        <label class="form-label">Phone Number</label>
+                                        <input type="number" class="form-control shadow-none">
+                                    </div>
+                                    <div class="col-md-6 p-0 mb-3">
+                                        <label class="form-label">Picture</label>
+                                        <input type="file" class="form-control shadow-none">
+                                    </div>
+                                    <div class="col-md-12 p-0">
+                                        <label class="form-label">Address</label>
+                                        <textarea class="form-control shadow-none" rows="1"></textarea>
+                                    </div>
+                                    <div class="col-md-6 ps-0 mb-3">
+                                        <label class="form-label">Pin Code</label>
+                                        <input type="number" class="form-control shadow-none">
+                                    </div>
+                                    <div class="col-md-6 p-0 mb-3">
+                                        <label class="form-label">Date Of Birth</label>
+                                        <input type="date" class="form-control shadow-none">
+                                    </div>
+                                    <div class="col-md-6 ps-0 mb-3">
+                                        <label class="form-label">Password</label>
+                                        <input type="password" class="form-control shadow-none">
+                                    </div>
+                                    <div class="col-md-6 p-0 mb-3">
+                                        <label class="form-label">Confirm Password</label>
+                                        <input type="password" class="form-control shadow-none">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="text-center my-1">
+                                <button type="submit"
+                                    class="btn btn-outline-dark book-button fw-bold mb-2">REGISTER</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- Carousel -->
+    <div class="container-fluid px-lg-0 mt-0">
+        <div class="swiper swiperContainer">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <img src="public/img/Carousel/1.jpeg" class="w-100 d-block carousel-img">
+                    <div class="row">
+                        <div class="col-lg-12 col-sm-4">
+                            <h1 class="carousel-text white ">Welcome To Arahnyam Cafe and Resort <br>
+                            </h1>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <img src="public/img/Carousel/2.jpeg" class="w-100 d-block carousel-img">
+                </div>
+                <div class="swiper-slide">
+                    <img src="public/img/Carousel/3.jpeg" class="w-100 d-block carousel-img">
+                </div>
+                <div class="swiper-slide">
+                    <img src="public/img/Carousel/4.jpeg" class="w-100 d-block carousel-img">
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Avaibility Section -->
+    <div class="avability-section">
+        <div class="container">
+            <div class="row ">
+                <div class="col-lg-12 bg-dark shadow p-4 rounded">
+                    <h5 class="mb-4">Check Booking Availability</h5>
+                    <form action="">
+                        <div class="row align-items-end ">
+                            <div class="col-lg-3 mb-3">
+                                <label class="form-label" style="font-weight: 500;">Check-In</label>
+                                <input type="date" class="form-control shadow-none">
+                            </div>
+                            <div class="col-lg-3 mb-3">
+                                <label class="form-label" style="font-weight: 500;">Check-Out</label>
+                                <input type="date" class="form-control shadow-none">
+                            </div>
+                            <div class="col-lg-2 mb-3">
+                                <label class="form-label" style="font-weight: 500;">Adult</label>
+                                <select class="form-select shadow-none">
+                                    <option selected value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                </select>
+                            </div>
+                            <div class="col-lg-2 mb-3">
+                                <label class="form-label" style="font-weight: 500;">Children</label>
+                                <select class="form-select shadow-none">
+                                    <option selected value="0">0</option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                </select>
+                            </div>
+                            <div class="col-lg-2 mb-lg-3 mt-2">
+                                <button type="submit" class="btn book-button shadow-none">Check Now</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Room Section -->
+    <div class="room-section" id="Rooms">
+
+        <h1 class="text-center headings">Our Rooms</h1>
+        <hr>
+        <div class="container">
+            <div class="row room-row">
+                <div class="rooms col-lg-3 col-sm-6">
+                    <div class="card room-cards mx-auto">
+                        <img src="./public/img/Rooms/Room1.1.jpeg" class="card-img-top" alt="...">
+                        <div class="card-body mx-auto">
+                            <h5 class="card-title">Luxury Suite</h5>
+                            <!-- <p class="card-text ">1500</p> -->
+                            <a href="#" class="btn btn-primary call-button">View Room</a>
+                            <a href="tel://+919557345422"><button type="button" class="btn btn-primary call-button">Book
+                                    Now</button></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="rooms col-lg-3 col-sm-6 ">
+                    <div class="card room-cards mx-auto">
+                        <img src="./public/img/Rooms/Room2.1.jpeg" class="card-img-top" alt="...">
+                        <div class="card-body mx-auto">
+                            <h5 class="card-title">Luxury Room</h5>
+                            <!-- <p class="card-text">2000</p> -->
+                            <a href="#" class="btn btn-primary call-button">View Room</a>
+                            <a href="tel://+919557345422"><button type="button" class="btn btn-primary call-button">Book
+                                    Now</button></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="rooms col-lg-3 col-sm-6 ">
+                    <div class="card room-cards mx-auto">
+                        <img src="./public/img/Rooms/Room3.1.jpeg" class="card-img-top" alt="...">
+                        <div class="card-body mx-auto">
+                            <h5 class="card-title">Premium Room</h5>
+                            <!-- <p class="card-text">2200</p> -->
+                            <a href="#" class="btn btn-primary call-button">View Room</a>
+                            <a href="tel://+919557345422"><button type="button" class="btn btn-primary call-button">Book
+                                    Now</button></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="rooms col-lg-3 col-sm-6 ">
+                    <div class="card room-cards mx-auto">
+                        <img src="./public/img/Rooms/Room4.1.jpeg" class="card-img-top" alt="...">
+                        <div class="card-body mx-auto">
+                            <h5 class="card-title">Ultra Premium Room</h5>
+                            <!-- <p class="card-text">2500</p> -->
+                            <a href="#" class="btn btn-primary call-button">View Room</a>
+                            <a href="tel://+919557345422"><button type="button" class="btn btn-primary call-button">Book
+                                    Now</button></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+
+    <!-- Initializing Swiper -->
+    <script>
+        var swiper = new Swiper(".swiperContainer", {
+            spaceBetween: 30,
+            effect: "fade",
+            loop: true,
+            autoplay: {
+                delay: 3500,
+                disableOnInteraction: false,
+            }
+        });
+    </script>
+</body>
+
+</html>
